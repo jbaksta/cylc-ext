@@ -1,0 +1,23 @@
+{
+  "title": "Cylc Menu",
+  "description": "Cylc Menu settings.",
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "cylc-menu",
+        "label": "Cylc",
+        "rank": 80,
+        "items": [
+          {
+            "command": "ncar:cylc-menu",
+            "args": {
+              "origin": "from the menu"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
