@@ -30,6 +30,13 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const hubPrefix = paths.urls.hubPrefix || '';
     const hubUser = paths.urls.hubUser || '';
     const hubServerName = paths.urls.hubServerName || '';
+
+    console.log('baseUrl: ' + baseUrl);
+    console.log('hubHost: ' + hubHost);
+    console.log('hubPrefix: ' + hubPrefix);
+    console.log('hubUser: ' + hubUser);
+    console.log('hubServerName: ' + hubServerName);
+
     var tgtUrl = '';
 
     if (!hubPrefix) {
@@ -38,7 +45,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
       tgtUrl = hubHost + URLExt.join(hubUser,hubServerName,'cylc');
     }
 
-    console.log('Base URL: ' + baseUrl);
     console.log('Tgt URL: ' + tgtUrl);
 
     const command = 'ncar:cylc-menu';
