@@ -39,6 +39,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     }
 
     console.log('Base URL: ' + baseUrl);
+    console.log('Tgt URL: ' + tgtUrl);
 
     const command = 'ncar:cylc-menu';
     commands.addCommand(command, {
