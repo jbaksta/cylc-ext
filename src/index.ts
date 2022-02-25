@@ -35,10 +35,11 @@ const plugin: JupyterFrontEndPlugin<void> = {
     if (!hubPrefix) {
       tgtUrl = baseUrl + URLExt.join('','cylc');
     } else {
-      tgtUrl = hubHost + URLExt.join(hubPrefix,hubUser,hubServerName,'cylc');
+      tgtUrl = hubHost + URLExt.join(hubUser,hubServerName,'cylc');
     }
 
     console.log('Base URL: ' + baseUrl);
+    console.log('Tgt URL: ' + tgtUrl);
 
     const command = 'ncar:cylc-menu';
     commands.addCommand(command, {
