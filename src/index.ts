@@ -35,7 +35,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     if (!hubPrefix) {
       tgtUrl = baseUrl + URLExt.join('','cylc');
     } else {
-      tgtUrl = hubHost + URLExt.join(hubPrefix,hubUser,hubServerName,'cylc');
+      tgtUrl = hubHost + URLExt.join(hubUser,hubServerName,'cylc');
     }
 
     console.log('Base URL: ' + baseUrl);
@@ -49,6 +49,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
           `ncar:cylc-menu has been called ${args['origin']}`
         );
         window.open(tgtUrl,'_blank');
+        console.log('tgtUrl: ' + tgtUrl);
       },
     });
 
