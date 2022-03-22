@@ -42,7 +42,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     if (!hubPrefix) {
       tgtUrl = baseUrl + URLExt.join('','cylc');
     } else {
-      tgtUrl = hubHost + URLExt.join(baseUrl,hubServerName,'cylc');
+      tgtUrl = hubHost + URLExt.join(baseUrl,'cylc');
     }
 
     console.log('Tgt URL: ' + tgtUrl);
